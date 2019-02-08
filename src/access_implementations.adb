@@ -1,15 +1,8 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
 
-package body vimplementations is
+package body Access_Implementations is
 
-   -- Normal_Calculator  
-   overriding
-   function Add(Self : in out Normal_Calculator; X:Integer; Y:Integer) return Integer is
-   begin
-      return X + Y;
-   end Add;
-   
    -- Cached_Calculator   
    overriding
    function Add(Self : in out Cached_Calculator; X:Integer; Y:Integer) return Integer is
@@ -27,7 +20,7 @@ package body vimplementations is
             
       return Self.CacheValue;
    end Add;
-   
+
    -- Logging_Calculator
    overriding
    function Add(Self : in out Logging_Calculator; X:Integer; Y:Integer) return Integer is
@@ -61,4 +54,4 @@ package body vimplementations is
    end Add;
 
 
-end vimplementations;
+end Access_Implementations;

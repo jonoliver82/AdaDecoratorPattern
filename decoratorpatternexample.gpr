@@ -4,5 +4,8 @@ project DecoratorPatternExample is
    for Object_Dir use "obj";
    for Main use ("main.adb");
 
+   package Compiler is
+   end Compiler;
+
 end DecoratorPatternExample;
 
