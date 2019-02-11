@@ -13,6 +13,16 @@ package Holder_Implementations is
       end record;
    function Add(Self: in out Cached_Calculator_Holder; X:Integer; Y:Integer) return Integer;
    
-   -- TODO Create Logging_Calculator_Holder, Profiling_Calculator_Holder
-
+   type Logging_Calculator_Holder is new Base_Calculator with
+      record
+         Decorated: Concrete_Calculators_Holder.Holder;
+      end record;
+   function Add(Self: in out Logging_Calculator_Holder; X:Integer; Y:Integer) return Integer;
+   
+   type Profiling_Calculator_Holder is new Base_Calculator with
+      record
+         Decorated: Concrete_Calculators_Holder.Holder;
+      end record;
+   function Add(Self: in out Profiling_Calculator_Holder; X:Integer; Y:Integer) return Integer;
+ 
 end Holder_Implementations;

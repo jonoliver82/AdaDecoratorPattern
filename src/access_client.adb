@@ -25,26 +25,26 @@ package body Access_Client is
       
    begin
       
-      Put_Line("---- No decoration ----");
+      Put_Line("---- ACCESS/NORMAL ----");
       Client_Test(concrete);
 
-      Put_Line("---- Cached Decorator ----");
+      Put_Line("---- ACCESS/CACHED DECORATOR ----");
       Client_Test(cached);
       Client_Test(cached);
 
-      Put_Line("---- Logging Decorator ----");
+      Put_Line("---- ACCESS/LOGGING DECORATOR ----");
       Client_Test(logging);
 
-      Put_Line("---- Profiling Decorator ----");
+      Put_Line("---- ACCESS/PROFILING DECORATOR ----");
       Client_Test(profiling);
 
-      Put_Line("---- Combined Logging & Profiling Decorator ----");
+      Put_Line("---- ACCESS/COMBINED LOGGING & PROFILING DECORATOR ----");
       Client_Test(loggingProfiling);
 
-      Put_Line("---- Combined Logging & Cached Decorator ----");
+      Put_Line("---- ACCESS/COMBINED LOGGING & CACHED DECORATOR ----");
       Client_Test(loggingCached);
 
-      Put_Line("---- Combined Cachced & Logging & Profiling Decorator ----");
+      Put_Line("---- ACCESS/COMBINED CACHED & LOGGING & PROFILING DECORATOR ----");
       Client_Test(cachedLoggingProfiling);
 
    end Test;
